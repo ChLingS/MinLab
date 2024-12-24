@@ -1,0 +1,41 @@
+/* Webkit 浏览器 */
+::-webkit-scrollbar {
+    width: 3px; /* 滚动条宽度 */
+}
+
+::-webkit-scrollbar-track {
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffa012; /* 滚动条滑块颜色 */
+    border-radius: 10px; /* 圆角 */
+    opacity: 1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6410; /* 悬停时滚动条滑块颜色 */
+}
+
+@font-face {
+    font-family: 'NovecentoSansWide';
+    src: url('/fontfamily/NovecentoSansWide-UltraLight.9f4c8be9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+@font-face {
+    font-family: 'SourceHanSerifCN';
+    src: url('/fontfamily/SourceHanSerifCN-Regular.ce5bffe3.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometos';
+    src: url('/fontfamily/Geometos.76f01edc.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
