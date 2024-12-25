@@ -2,7 +2,7 @@
     <div class="container">
         <figure :style="{ backgroundImage: `url(${backImage})` }" class="background-image">
             <div class="content">
-                <div style="display: flex; gap: 0.5rem;">
+                <div style="display: flex; gap: 0.5rem; align-items: center; justify-content: center;">
                     <KinesisContainer>
                         <KinesisElement :strength="10">
                             <h1
@@ -102,19 +102,44 @@ const scrollToTarget = () => {
     padding-top: 1px;
 }
 
-/* 确保容器本身不会引起任何滚动 */
 .container {
     height: 100vh;
-    /* 确保容器高度覆盖整个视窗高度 */
 }
 
 .content {
     position: absolute;
     top: 43%;
-    left: 25%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
+}
+
+.flex-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.animated-text {
+    font-family: 'NovecentoSansWide', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 600;
+}
+
+.description {
+    font-family: SourceHanSerifCN;
+    font-size: 1.1rem;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .arrow {
@@ -126,7 +151,6 @@ const scrollToTarget = () => {
     position: relative;
     animation: moveDown 1s infinite;
     cursor: pointer;
-    /* 根据需要调整 */
 }
 
 .date {
@@ -148,6 +172,28 @@ const scrollToTarget = () => {
 
     100% {
         top: 0;
+    }
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 862px) {
+    .content {
+        top: 45%;
+        left: 50%;
+    }
+
+    .animated-text {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid rgb(255, 255, 255);
     }
 }
 </style>

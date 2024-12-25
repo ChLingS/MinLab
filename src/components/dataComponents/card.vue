@@ -2,10 +2,10 @@
     <div class="card">
         <img :src="imageUrl" @error="setDefaultImage" />
         <div class="card-body">
-            <h3><a class="card-title">{{ title }}</a></h3>
+            <h3><a :href= perpar_url class="card-title">{{ title }}</a></h3>
             <p>{{ description }}</p>
             <!-- <button @click="handleClick">Click me</button> -->
-            <div class="card-date">Date: {{ date }}</div>
+            <div v-if="date" class="card-date">Date: {{ date }}</div>
         </div>
     </div>
 </template>
@@ -15,6 +15,10 @@ const props = defineProps({
     title: {
         type: String,
         required: true
+    },
+    perpar_url:{
+        type: String,
+        required: false
     },
     description: {
         type: String,
@@ -56,7 +60,7 @@ const { proxy } = getCurrentInstance(); const setDefaultImage = (event) => {
 .card img {
     max-width: 10rem;
     /* 限制图片最大宽度为卡片宽度 */
-    max-height: 100%;
+    max-height: 10rem;
     /* 限制图片最大高度 */
     height: auto;
     /* 保持图片比例 */

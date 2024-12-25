@@ -16,6 +16,7 @@ export function usePersons() {
     }
   };
 
+
   onMounted(fetchPersons);
 
   return { persons };

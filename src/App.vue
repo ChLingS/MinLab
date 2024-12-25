@@ -25,7 +25,7 @@ import backTotop from './components/backTotop.vue';
 
 /* 添加过渡动画的样式 */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
 }
 
 .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
