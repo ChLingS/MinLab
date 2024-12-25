@@ -178,6 +178,10 @@ onUnmounted(() => {
     }
     .card-list {
         width: 100%;
+
+    }
+    .card-item{
+        font-size: 1rem;
     }
 }
 </style>
