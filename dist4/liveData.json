@@ -1,14 +1,15 @@
 [
   {
     "title": "Geospatial Analysis of Urban Heat Islands",
+    "paper_url":"",
     "abstract": "This paper explores the phenomenon of urban heat islands (UHI) through geospatial analysis techniques. It highlights the impact of urbanization on temperature variations and suggests mitigation strategies.",
-    "image_url": "https://example.com/images/uhi_analysis.png",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
     "date": "2024-01-15"
   },
   {
     "title": "Mapping Renewable Energy Potentials Using GIS",
     "abstract": "This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. It provides an in-depth analysis of suitable locations for renewable energy installations.",
-    "image_url": "https://example.com/images/renewable_energy_map.png",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
     "date": "2024-02-20"
   },
   {
@@ -22,5 +23,61 @@
     "abstract": "The paper discusses the use of remote sensing technologies in monitoring agricultural activities. It covers topics such as crop health assessment and yield prediction using satellite imagery.",
     "image_url": "https://example.com/images/agriculture_monitoring.png",
     "date": "2024-04-05"
+  },
+  {
+    "title": "Geospatial Analysis of Urban Heat Islands",
+    "paper_url":"",
+    "abstract": "This paper explores the phenomenon of urban heat islands (UHI) through geospatial analysis techniques. It highlights the impact of urbanization on temperature variations and suggests mitigation strategies.",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
+    "date": "2024-01-15"
+  },
+  {
+    "title": "Mapping Renewable Energy Potentials Using GIS",
+    "abstract": "This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. It provides an in-depth analysis of suitable locations for renewable energy installations.",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
+    "date": "2024-02-20"
+  },
+  {
+    "title": "Assessment of Flood Risk in Coastal Areas",
+    "abstract": "This research assesses the risk of flooding in coastal areas using GIS. It involves the creation of flood risk maps to help in planning and management strategies for disaster resilience.",
+    "image_url": "https://example.com/images/flood_risk_map.png",
+    "date": "2024-03-10"
+  },
+  {
+    "title": "Mapping Renewable Energy Potentials Using GIS",
+    "abstract": "This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. It provides an in-depth analysis of suitable locations for renewable energy installations.",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
+    "date": "2024-02-20"
+  },
+  {
+    "title": "Assessment of Flood Risk in Coastal Areas",
+    "abstract": "This research assesses the risk of flooding in coastal areas using GIS. It involves the creation of flood risk maps to help in planning and management strategies for disaster resilience.",
+    "image_url": "https://example.com/images/flood_risk_map.png",
+    "date": "2024-03-10"
+  },
+  {
+    "title": "Remote Sensing for Agricultural Monitoring",
+    "abstract": "The paper discusses the use of remote sensing technologies in monitoring agricultural activities. It covers topics such as crop health assessment and yield prediction using satellite imagery.",
+    "image_url": "https://example.com/images/agriculture_monitoring.png",
+    "date": "2024-04-05"
+  },
+  {
+    "title": "Geospatial Analysis of Urban Heat Islands",
+    "paper_url":"",
+    "abstract": "This paper explores the phenomenon of urban heat islands (UHI) through geospatial analysis techniques. It highlights the impact of urbanization on temperature variations and suggests mitigation strategies.",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
+    "date": "2024-01-15"
+  },
+  {
+    "title": "Mapping Renewable Energy Potentials Using GIS",
+    "abstract": "This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. It provides an in-depth analysis of suitable locations for renewable energy installations.",
+    "image_url": "https://picture.gptkong.com/20241224/1633a04a57d6704fa380ca8922797a246d.jpg",
+    "date": "2024-02-20"
+  },
+  {
+    "title": "Assessment of Flood Risk in Coastal Areas",
+    "abstract": "This research assesses the risk of flooding in coastal areas using GIS. It involves the creation of flood risk maps to help in planning and management strategies for disaster resilience.",
+    "image_url": "https://example.com/images/flood_risk_map.png",
+    "date": "2024-03-10"
   }
 ]

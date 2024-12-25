@@ -131,7 +131,7 @@ onUnmounted(() => {
     /* 固定位置 */
     top: 20%;
     /* 从顶部开始的距离，可以根据需要调整 */
-    right: 10px;
+    right: 1.2rem;
     /* 固定在右侧 */
     font-family: NovecentoSansWide;
     font-size: 2rem;
@@ -175,6 +175,9 @@ onUnmounted(() => {
 @media screen and (max-width: 862px) {
     .grade-list {
         font-size: 1.2em;
+    }
+    .card-list {
+        width: 100%;
     }
 }
 </style>

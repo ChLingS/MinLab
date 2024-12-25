@@ -5,44 +5,32 @@
                 <div style="display: flex; gap: 0.5rem; align-items: center; justify-content: center;">
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                M</h1>
+                            <h1>M</h1>
                         </KinesisElement>
                     </KinesisContainer>
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                i</h1>
+                            <h1>i</h1>
                         </KinesisElement>
                     </KinesisContainer>
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                n</h1>
+                            <h1>n</h1>
                         </KinesisElement>
                     </KinesisContainer>
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                L</h1>
+                            <h1>L</h1>
                         </KinesisElement>
                     </KinesisContainer>
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                a</h1>
+                            <h1>a</h1>
                         </KinesisElement>
                     </KinesisContainer>
                     <KinesisContainer>
                         <KinesisElement :strength="10">
-                            <h1
-                                style="font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600;">
-                                b</h1>
+                            <h1>b</h1>
                         </KinesisElement>
                     </KinesisContainer>
                 </div>
@@ -114,6 +102,9 @@ const scrollToTarget = () => {
     text-align: center;
     color: #ffffff;
 }
+.content h1 {
+    font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600
+}
 
 .flex-container {
     display: flex;
@@ -181,7 +172,9 @@ const scrollToTarget = () => {
         top: 45%;
         left: 50%;
     }
-
+    .content h1 {
+        font-size: 4rem;
+    }
     .animated-text {
         font-size: 2.5rem;
     }
