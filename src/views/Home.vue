@@ -42,14 +42,7 @@
                     <span>研究团队</span>
                 </div>
             </div>
-            <div style="    
-                position: absolute; 
-                bottom: 100px; /* 调整此值以控制箭头距离底部的距离 */ 
-                display: flex; 
-                justify-content: center; /* 水平居中 */ 
-                align-items: center; /* 垂直居中 */ 
-                width: 100%; /* 确保 arrow-wrapper 覆盖整个宽度 */
-                ">
+            <div class="arrow-container">
                 <div class="arrow" @click="scrollToTarget"></div>
             </div>
             <div class="date">
@@ -102,8 +95,11 @@ const scrollToTarget = () => {
     text-align: center;
     color: #ffffff;
 }
+
 .content h1 {
-    font-family: 'NovecentoSansWide', sans-serif; font-size: 5.5rem; font-weight: 600
+    font-family: 'NovecentoSansWide', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 600
 }
 
 .flex-container {
@@ -133,6 +129,18 @@ const scrollToTarget = () => {
     width: 100%;
 }
 
+.arrow-container {
+    position: absolute;
+    bottom: 100px;
+    /* 调整此值以控制箭头距离底部的距离 */
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 100%;
+}
+
 .arrow {
     width: 0;
     height: 0;
@@ -147,7 +155,7 @@ const scrollToTarget = () => {
 .date {
     position: absolute;
     bottom: 3%;
-    right: 3%;
+    right: 0.1rem;
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -169,12 +177,14 @@ const scrollToTarget = () => {
 /* Media queries for mobile responsiveness */
 @media (max-width: 862px) {
     .content {
-        top: 45%;
+        top: 38%;
         left: 50%;
     }
+
     .content h1 {
         font-size: 4rem;
     }
+
     .animated-text {
         font-size: 2.5rem;
     }
@@ -183,10 +193,18 @@ const scrollToTarget = () => {
         font-size: 0.9rem;
     }
 
+    .arrow-container {
+        bottom: 7rem;
+    }
     .arrow {
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-top: 15px solid rgb(255, 255, 255);
+    }
+
+    .date {
+        font-size: 0.8rem;
+        right: 0rem;
     }
 }
 </style>
