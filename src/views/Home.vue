@@ -176,6 +176,9 @@ const scrollToTarget = () => {
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 862px) {
+    /* .container{
+        height: 15vh;
+    } */
     .content {
         top: 38%;
         left: 50%;

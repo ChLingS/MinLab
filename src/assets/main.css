@@ -39,3 +39,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'thin_english';
+    src: url('/fontfamily/thin_english.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Bender';
+    src: url('/fontfamily/Bender.11795b1b.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

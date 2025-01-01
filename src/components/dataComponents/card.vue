@@ -88,4 +88,11 @@ const { proxy } = getCurrentInstance(); const setDefaultImage = (event) => {
     background-position: left bottom;
     background-size: 100% 1px;
 }
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>

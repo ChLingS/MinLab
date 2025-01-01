@@ -12,7 +12,7 @@
     </div>
 
     <ul class="centered-list">
-      <li v-for="(paper, index) in visiblePapers" :key="index" class="centered-item">
+      <li v-for="(paper, index) in visiblePapers" :key="index" class="centered-item" v-slideln>
         <Card :title="paper.title" :description="paper.abstract" :imageUrl="paper.image_url" :date="paper.date" />
       </li>
     </ul>
@@ -26,6 +26,7 @@
 import { ref, computed } from 'vue';
 import { usePapers } from '@/Hooks/getLiveData.js';
 import Card from '@/components/dataComponents/card.vue';
+import vSlideln from '@/plugins/vSlideln.js';
 
 const { papers } = usePapers();
 const visibleCount = ref(10); // 初始显示的卡片数量

@@ -1,23 +1,18 @@
 <template>
     <div class="container">
-        <figure :style="{ backgroundImage: `url(${backImage})` }" class="background-image" />
+        <figure :style="{ backgroundImage: `url(${backImage})` }" class="background-image"></figure>
     </div>
     <div class="title">
-        <span>
-            人员构成
-        </span>
-        <div style="
-                width: 80%;  
-                height: 2px; /* 分界线高度 */
-                background-color: #ccc; /* 分界线颜色 */ 
-                margin: 20px auto 0; /* 上下边距和居中对齐 */ 
-                border-radius: 1px;
-            "></div>
+        <span>人员构成</span>
+        <div class="divider"></div>
     </div>
     <div class="the_Boss">
-        <card :title="'导师：黄敏'" :description="'&emsp;&emsp;武汉大学博士毕业，2023年赣鄱俊才·江西省主要学科学术和技术带头人（青年），国家自然科学基金委员会通讯评议专家，国际SCI二区学术期刊Remote Sensing专刊主编、国际学术期刊Data Science and Management青年编委、国际学术会议ICAG、AOGS分会场主席。主要从事智慧城市、遥感应用、北斗地理信息产教融合，在G&RS、JAG等国际权威学术期刊上发表论文10多篇。'"
-            :imageUrl="'https://dlxy.jxnu.edu.cn/_upload/article/images/04/2c/25605e83423f8dfdcdda3843c0b0/be785e3a-53fb-49e7-8648-8025d791e285.jpg'"
-            :date="''" />
+        <card 
+            :title="'导师：黄敏'" 
+            :description="'&emsp;&emsp;武汉大学博士毕业，2023年赣鄱俊才·江西省主要学科学术和技术带头人（青年），国家自然科学基金委员会通讯评议专家，国际SCI二区学术期刊Remote Sensing专刊主编、国际学术期刊Data Science and Management青年编委、国际学术会议ICAG、AOGS分会场主席。主要从事智慧城市、遥感应用、北斗地理信息产教融合，在G&RS、JAG等国际权威学术期刊上发表论文10多篇。'" 
+            :imageUrl="'https://dlxy.jxnu.edu.cn/_upload/article/images/04/2c/25605e83423f8dfdcdda3843c0b0/be785e3a-53fb-49e7-8648-8025d791e285.jpg'" 
+            :date="''" 
+        />
     </div>
     <div class="card-list">
 
@@ -62,7 +57,7 @@ watch(persons, (newPersons) => {
 
 const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    showSidebar.value = scrollTop > window.innerHeight * 0.2; // 滚动到页面 20% 高度时显示
+    showSidebar.value = scrollTop > window.innerHeight * 1; // 滚动到页面 20% 高度时显示
 };
 
 onMounted(() => {
@@ -89,7 +84,6 @@ onUnmounted(() => {
     background-size: cover;
     z-index: -1;
     background-position: center center;
-    padding-top: 1px;
 }
 
 .title {
@@ -103,22 +97,28 @@ onUnmounted(() => {
     font-family: SourceHanSerifCN;
 }
 
+.divider {
+    width: 80%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px auto 0;
+    border-radius: 1px;
+}
+
+.the_Boss {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
 .card-list {
     display: flex;
-    /* justify-content: center; */
-    /* 水平居中对齐 */
     flex-wrap: wrap;
-    /* 允许换行 */
+    justify-content: center;
     padding: 0;
     margin: 0 auto;
-    /* 确保列表在父容器中居中 */
     list-style-type: none;
     width: 65%;
-}
-.the_Boss {
-    display:flex;
-    justify-content:center;
-    font-family: sans-serif;
 }
 .card-item {
     margin: 30px;
@@ -173,8 +173,12 @@ onUnmounted(() => {
 }
 
 @media screen and (max-width: 862px) {
+    .container{
+        height: 200px;
+    }
     .grade-list {
         font-size: 1.2em;
+        right: 2rem;
     }
     .card-list {
         width: 100%;

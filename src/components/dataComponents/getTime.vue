@@ -27,7 +27,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #ffffff;
-    font-family: Geometos;
+    font-family: 'Geometos';
   }
   </style>
   

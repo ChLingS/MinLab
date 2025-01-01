@@ -7,7 +7,7 @@
             <p class="blog-post-text"> abstract: {{ text }} </p>
             <KinesisContainer>
                 <KinesisElement :strength="10">
-                    <a :href="perpar_url" class="blog-post-cta">Read more</a>
+                    <a :href="paper_url" class="blog-post-cta">Read more</a>
                 </KinesisElement>
             </KinesisContainer>
         </div>
@@ -41,7 +41,7 @@ const props = defineProps({
         type: String,
         required: true
     },
-    perpar_url: {
+    paper_url: {
         type: String,
         required: true
     }
@@ -123,7 +123,9 @@ const props = defineProps({
     background-size: 100% 1px;
 }
 
+
 .blog-post-text {
+    font-family: 'thin_english', sans-serif;
     margin-bottom: 3rem;
     font-size: 0.96rem;
     color: rgba(0, 0, 0, 0.7);
@@ -177,13 +179,14 @@ const props = defineProps({
     .blog-post {
         /* padding: 1rem; */
         flex-direction: column;
+        
         /* margin: 0px; */
     }
 
     .blog-post-img {
         min-width: 100%;
         max-width: 100%;
-        transform: translate(0, -3rem);
+        /* transform: translate(0, -3rem); */
     }
 
     .blog-post-info {

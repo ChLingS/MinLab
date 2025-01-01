@@ -27,9 +27,12 @@
   <Transition>
 
     <div class="dropdown-menu" v-if="menu">
-      <li style="height: 0.9rem;">
-        <a></a>
+      <li>
+        <a>&ensp;</a>
       </li>
+      <!-- <li>
+        <a>&ensp;</a>
+      </li> -->
       <li>
         <a href="/" class="nav-link"><span class="underline">首页</span></a>
       </li>
@@ -185,9 +188,8 @@ header>nav {
   position: fixed;
   justify-content: center;
   align-items: center;
-  /* right: 2rem; */
-  /* top: 60px; */
   width: 100%;
+  /* height: 100%; */
   background-color: rgba(255, 255, 255, 1);
   backdrop-filter: blur(15px);
   border-radius: 0 0 10px 10px;
@@ -210,7 +212,8 @@ header>nav {
 
 .dropdown-menu li a {
   margin-left: 3rem;
-  color: #2e2e2e;
+  color: #767676;
+  mix-blend-mode: difference; 
 }
 
 .dropdown-menu li a:hover {
