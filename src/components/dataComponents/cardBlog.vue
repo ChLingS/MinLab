@@ -1,8 +1,11 @@
 <template>
     <div class="blog-post">
-        <div class="blog-post-img"> <img :src="imageUrl" alt="" @error="setDefaultImage"> </div>
+        <div class="blog-post-img"> 
+            <img :src="imageUrl" alt="" @error="setDefaultImage">
+            <!-- <img :src="imageUrl" alt="" @error="setDefaultImage">  -->
+        </div>
         <div class="blog-post-info">
-            <div class="blog-post-date"> <span>{{ day }}</span> <span>{{ date }}</span> </div>
+            <div class="blog-post-date"> <span>{{ nameOfjournal }}</span> <span>{{ date }}</span> </div>
             <h1 class="blog-post-title">{{ title }}</h1>
             <p class="blog-post-text"> abstract: {{ text }} </p>
             <KinesisContainer>
@@ -33,9 +36,9 @@ const props = defineProps({
         type: String,
         required: true
     },
-    day: {
+    nameOfjournal: {
         type: String,
-        required: true
+        required: false
     },
     imageUrl: {
         type: String,

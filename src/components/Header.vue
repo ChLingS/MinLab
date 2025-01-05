@@ -8,7 +8,7 @@
       <div class="nav-group">
         <div class="center-group">
           <a href="/" class="nav-link"><span class="underline">首页</span></a>
-          <a href="#" class="nav-link"><span class="underline">研究课题</span></a>
+          <a href="/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
           <a href="/Patents" class="nav-link"><span class="underline">专利相关</span></a>
           <a href="/Animals" class="nav-link"><span class="underline">团队成员</span></a>
           <a href="/About" class="nav-link"><span class="underline">关于</span></a>
@@ -37,7 +37,7 @@
         <a href="/" class="nav-link"><span class="underline">首页</span></a>
       </li>
       <li>
-        <a href="#" class="nav-link"><span class="underline">研究课题</span></a>
+        <a href="/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
       </li>
       <li>
         <a href="/Patents" class="nav-link"><span class="underline">专利相关</span></a>

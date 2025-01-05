@@ -1,37 +1,67 @@
+
 [
-  {
-    "name": "Huan Sun",
-    "email": "19914793143@163.com",
-    "img": "https://example.com/images/alice.jpg",
-    "grade": "2023",
-    "type": 2
-  },
-  {
-    "name": "陈世明",
-    "email": "2314308540@qq.com",
-    "img": "https://my.chsi.com.cn/archive/photo/lqpic.do?pid=za90wiv06u7d94mi",
-    "grade": "2024",
-    "type": "2"
-  },
-  {
-    "name": "欧阳可豪",
-    "email": "adan_gis@163.com",
-    "img": "https://www.helloimg.com/i/2024/12/29/6771546cc3620.jpg",
-    "grade": "2021",
-    "type": "3"
-  },
-  {
-    "name": "李焕芬",
-    "email": "lihuanfen77@163.com",
-    "img": "https://www.helloimg.com/i/2024/12/29/6770e8a04ebfc.jpg",
-    "grade": "2023",
-    "type": "2"
-  },
-  {
-    "name": "邓宇亮",
-    "email": "dengyuliang2019@163.com",
-    "img": "https://www.helloimg.com/i/2024/12/29/6770ec083ad36.jpg",
-    "grade": "2023",
-    "type": "2"
-  }
+	{
+  "name": "陈世明",
+  "email": "2314308540@qq.com",
+  "img": "https://my.chsi.com.cn/archive/photo/lqpic.do?pid=za90wiv06u7d94mi",
+  "grade": "2024",
+  "type": "2"
+},
+	{
+  "name": "欧阳可豪",
+  "email": "adan_gis@163.com",
+  "img": "https://www.helloimg.com/i/2024/12/29/6771546cc3620.jpg",
+  "grade": "2021",
+  "type": "3"
+},
+{
+  "name": "李焕芬",
+  "email": "lihuanfen77@163.com",
+  "img": "https://www.helloimg.com/i/2024/12/29/6770e8a04ebfc.jpg",
+  "grade": "2023",
+  "type": "2"
+},
+{
+  "name": "邓宇亮",
+  "email": "dengyuliang2019@163.com",
+  "img": "https://www.helloimg.com/i/2024/12/29/6770ec083ad36.jpg",
+  "grade": "2023",
+  "type": "2"
+},
+{
+  "name": "Huan Sun",
+  "email": "19914793143@163.com",
+  "img": "https://example.com/images/alice.jpg",
+  "grade": "2023",
+  "type": "2"
+},
+{
+"name": "钟顺",
+  "email": "zhongshun@jxnu.edu.cn",
+  "img": "",
+  "grade": "2021",
+  "type": "3"
+},
+{
+  "name": "汪轶鸣",
+  "email": "wang_ym@jxnu.edu.com",
+  "img": "https://jwc.jxnu.edu.cn/MyControl/All_PhotoShow.aspx?UserNum=MjAyMjI0ODAxMDE2&UserType=Student",
+  "grade": "2022",
+  "type": "3"
+},
+{
+  "name": "刘轩",
+  "email": "202225405021@jxnu.edu.cn",
+  "img": "https://jwc.jxnu.edu.cn/MyControl/All_PhotoShow.aspx?UserNum=MjAyMjI1NDA1MDIx&UserType=Student",
+  "grade": "2022",
+  "type": "3"
+},
+{
+  "name": "朱明卓",
+  "email": "shirley199911@163.com",
+  "img": "https://www.helloimg.com/i/2024/12/31/6773663bee236.jpg",
+  "grade": "2022",
+  "type": "2"
+}
 ]
+

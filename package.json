@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "d3-geo": "^3.1.1",
+    "three-tween": "^1.0.0",
+    "three.js": "^0.77.1",
     "vue": "^3.5.13",
     "vue-kinesis": "^2.0.5",
     "vue-router": "^4.4.5"

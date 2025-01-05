@@ -14,67 +14,41 @@
                 border-radius: 1px;
             "></div>
         </div>
-
         <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
+            <div v-for="(patent, index) in visiblePatents" :key="index" v-slideln>
+                <cardBlog :title="patent.title" 
+                          :date="patent.date" 
+                          :text="patent.abstract"
+                          :imageUrl="patent.image_url"
+                          :paper_url="patent.paper_url" />
+            </div>
         </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
-        </div>
-        <div class="card-list">
-            <cardBlog title="Geospatial Analysis of Urban Heat Islands" text="abstract: 
-            This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations.This study uses GIS to map the potentials of renewable energy sources such as solar and wind energy. 
-            It provides an in-depth analysis of suitable locations for renewable energy installations"
-                date="2023-01-01" day="Sunday" imageUrl="path/to/image.jpg" paper_url="path/to/paper.pdf" />
+        <div v-if="patents.length > visiblePatents.length" class="load-more">
+            <button @click="loadMore" class="arrow-button">⬇️</button>
         </div>
     </div>
 </template>
 <script setup>
+import { computed, ref } from 'vue';
 import cardBlog from '@/components/dataComponents/cardBlog.vue';
+import vSlideln from '@/plugins/vSlideln';
+import { usePatents } from '@/Hooks/getPatentData.js';
+
+const { patents } = usePatents();
+
+// console.log("patent", patents.value);
+
+const visibleCount = ref(10);
+
+const visiblePatents = computed(() => {
+    return patents.value.slice(0, visibleCount.value);
+});
+
+const loadMore = () => {
+    visibleCount.value += 10;
+};
+
+
 </script>
 <style scoped>
 /* scoped 使用得定义的样式只在本页面内生效  */
@@ -102,10 +76,24 @@ import cardBlog from '@/components/dataComponents/cardBlog.vue';
     padding: 20px;
 }
 
+.load-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .card-list {
         width: 100%;
         padding: 0px;
     }
 }
+
+
 </style>
