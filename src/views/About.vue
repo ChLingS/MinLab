@@ -23,11 +23,22 @@ function Init() {
     // Scene
     scene = new THREE.Scene()
     scene.background = new THREE.Color(0x000000)
-
     // Camera
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
-    camera.position.set(0, 0, 5)
-    camera.lookAt(new THREE.Vector3(0, 0, 0)) // Ensure the camera is looking at the origin
+    const aspect = window.innerWidth / window.innerHeight;
+    const frustumSize = 10;
+    camera = new THREE.OrthographicCamera(
+        frustumSize * aspect / -5,
+        frustumSize * aspect / 5,
+        frustumSize / 5,
+        frustumSize / -5,
+        0.1,
+        10
+    );
+    camera.position.set(0, 0, 0.1);
+    camera.lookAt(new THREE.Vector3(0, 0, 0));
+    // camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000)
+    // camera.position.set(0, 0, 5)
+    // camera.lookAt(new THREE.Vector3(0, 0, 0)) 
 
     // Renderer
     renderer = new THREE.WebGLRenderer({ antialias: true })
@@ -84,10 +95,10 @@ function Init() {
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
     const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.05,
+        size: 3,
         map: new THREE.TextureLoader().load('/Model/white-dot.png'),
         alphaTest: 0.1,
-        opacity: 0.5,
+        opacity: 1,
         transparent: true,
         depthTest: true
     })
@@ -148,8 +159,8 @@ function animate() {
             const distance = Math.sqrt(dx * dx + dy * dy)
 
             if (distance < 0.5) { // Adjusted distance threshold
-                positions[i] += dx * 0.1
-                positions[i + 1] += dy * 0.1
+                positions[i] += dx * 0.05
+                positions[i + 1] += dy * 0.05
                 // No need to update z as it is always 0
             }
         }
