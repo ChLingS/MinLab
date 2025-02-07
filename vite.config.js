@@ -10,6 +10,15 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
+  base: './',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
+  }
+  ,
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
