@@ -17,8 +17,7 @@ export default defineConfig({
         manualChunks: undefined,
       }
     }
-  }
-  ,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
