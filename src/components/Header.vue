@@ -7,11 +7,11 @@
       </a>
       <div class="nav-group">
         <div class="center-group">
-          <a href="/warming/" class="nav-link"><span class="underline">首页</span></a>
-          <a href="/warming/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
-          <a href="/warming/Patents" class="nav-link"><span class="underline">专利相关</span></a>
-          <a href="/warming/Animals" class="nav-link"><span class="underline">团队成员</span></a>
-          <a href="/warming/About" class="nav-link"><span class="underline">关于</span></a>
+          <a href="/MinLab/" class="nav-link"><span class="underline">首页</span></a>
+          <a href="/MinLab/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
+          <a href="/MinLab/Patents" class="nav-link"><span class="underline">专利相关</span></a>
+          <a href="/MinLab/Animals" class="nav-link"><span class="underline">团队成员</span></a>
+          <a href="/MinLab/About" class="nav-link"><span class="underline">关于</span></a>
         </div>
       </div>
       <div class="nav-group">
@@ -34,19 +34,19 @@
         <a>&ensp;</a>
       </li> -->
       <li>
-        <a href="/warming/" class="nav-link"><span class="underline">首页</span></a>
+        <a href="/MinLab/" class="nav-link"><span class="underline">首页</span></a>
       </li>
       <li>
-        <a href="/warming/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
+        <a href="/MinLab/Periodicals" class="nav-link"><span class="underline">论文成果</span></a>
       </li>
       <li>
-        <a href="/warming/Patents" class="nav-link"><span class="underline">专利相关</span></a>
+        <a href="/MinLab/Patents" class="nav-link"><span class="underline">专利相关</span></a>
       </li>
       <li>
-        <a href="/warming/Animals" class="nav-link"><span class="underline">团队成员</span></a>
+        <a href="/MinLab/Animals" class="nav-link"><span class="underline">团队成员</span></a>
       </li>
       <li>
-        <a href="/warming/About" class="nav-link"><span class="underline">关于</span></a>
+        <a href="/MinLab/About" class="nav-link"><span class="underline">关于</span></a>
       </li>
       <li>
         <a href="#" class="nav-link"><span class="underline">联系我们</span></a>
