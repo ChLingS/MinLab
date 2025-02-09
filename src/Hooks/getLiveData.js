@@ -5,7 +5,7 @@ export function usePapers() {
 
   const fetchPapers = async () => {
     try {
-      const response = await fetch('/warming/Json/liveData.json');
+      const response = await fetch('/MinLab/Json/liveData.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

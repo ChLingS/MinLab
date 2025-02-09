@@ -181,6 +181,8 @@ const scrollToTarget = () => {
         height: auto;
         min-height: 20vh;
         background-attachment: scroll;
+        border-bottom-left-radius: 50% 20%;
+        border-bottom-right-radius: 50% 20%;
     }
      .content {
         visibility: hidden;
