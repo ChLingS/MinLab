@@ -5,7 +5,7 @@ export function usePeriodicals() {
 
   const fetchPeriodicals = async () => {
     try {
-      const response = await fetch('/periodicalData.json');
+      const response = await fetch('/warming/Json/periodicalData.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

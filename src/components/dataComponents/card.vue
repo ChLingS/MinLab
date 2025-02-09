@@ -1,22 +1,26 @@
 <template>
     <div class="card">
-        <img :src="imageUrl" @error="setDefaultImage" />
+        <!-- 图片容器 -->
+        <div class="image-container">
+            <img :src="imageUrl" @error="setDefaultImage" />
+        </div>
         <div class="card-body">
-            <h3><a :href= perpar_url class="card-title">{{ title }}</a></h3>
+            <h3><a :href="perpar_url" class="card-title">{{ title }}</a></h3>
             <p>{{ description }}</p>
-            <!-- <button @click="handleClick">Click me</button> -->
             <div v-if="date" class="card-date">Date: {{ date }}</div>
         </div>
     </div>
 </template>
+
 <script setup>
 import { getCurrentInstance } from 'vue';
+
 const props = defineProps({
     title: {
         type: String,
         required: true
     },
-    perpar_url:{
+    perpar_url: {
         type: String,
         required: false
     },
@@ -32,19 +36,17 @@ const props = defineProps({
         type: String,
         required: true
     }
-})
-const { proxy } = getCurrentInstance(); const setDefaultImage = (event) => {
-    event.target.src = proxy.$defaultImage; // 使用全局默认图片 
-};
+});
 
+const { proxy } = getCurrentInstance();
+const setDefaultImage = (event) => {
+    event.target.src = proxy.$defaultImage; // 使用全局默认图片
+};
 </script>
 
 <style scoped>
 .card {
     display: flex;
-    /* 使用 Flexbox 布局 */
-    /* align-items: center;
-    垂直居中对齐 */
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
@@ -54,19 +56,32 @@ const { proxy } = getCurrentInstance(); const setDefaultImage = (event) => {
 
 .card:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* 添加阴影效果 */
 }
 
-.card img {
-    max-width: 10rem;
-    /* 限制图片最大宽度为卡片宽度 */
+/* 图片容器 */
+.image-container {
+    width: 100%;
+    max-width: 100%;
     max-height: 10rem;
-    /* 限制图片最大高度 */
-    height: auto;
-    /* 保持图片比例 */
+    overflow: hidden; /* 隐藏超出部分 */
     border-radius: 4px;
-    object-fit: cover;
-    /* 保持图片覆盖 */
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* 图片样式 */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 保持图片比例并覆盖容器 */
+    transition: transform 0.3s ease; /* 添加缩放过渡效果 */
+}
+
+/* 鼠标移入时缩放图片 */
+.image-container:hover img {
+    transform: scale(1.1); /* 缩放比例为1.1 */
 }
 
 .card-body {
@@ -88,6 +103,7 @@ const { proxy } = getCurrentInstance(); const setDefaultImage = (event) => {
     background-position: left bottom;
     background-size: 100% 1px;
 }
+
 @media screen and (max-width: 768px) {
     .card {
         width: 100%;

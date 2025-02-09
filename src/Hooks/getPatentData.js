@@ -5,7 +5,7 @@ export function usePatents() {
 
   const fetchPatents = async () => {
     try {
-      const response = await fetch('/patentData.json');
+      const response = await fetch('/warming/Json/patentData.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

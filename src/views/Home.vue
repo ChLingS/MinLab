@@ -176,10 +176,24 @@ const scrollToTarget = () => {
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 862px) {
-    /* .container{
-        height: 15vh;
-    } */
-    .content {
+
+    .background-image {
+        height: auto;
+        min-height: 20vh;
+        background-attachment: scroll;
+    }
+     .content {
+        visibility: hidden;
+     }
+     .arrow-container {
+        visibility: hidden;
+     }
+     .date {
+        visibility: hidden;
+
+     }
+     
+    /* .content {
         top: 38%;
         left: 50%;
     }
@@ -208,6 +222,6 @@ const scrollToTarget = () => {
     .date {
         font-size: 0.8rem;
         right: 0rem;
-    }
+    } */
 }
 </style>

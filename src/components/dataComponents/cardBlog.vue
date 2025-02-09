@@ -81,6 +81,7 @@ const props = defineProps({
     height: 19rem;
     /* transform: translateX(-5rem); */
     position: relative;
+    overflow: hidden;
 }
 
 .blog-post-img img {
@@ -89,7 +90,13 @@ const props = defineProps({
     object-fit: cover;
     border-radius: 0.8rem;
     display: block;
+    transition: transform 0.3s ease; /* 添加缩放过渡效果 */
 }
+
+.blog-post-img img:hover {
+    transform: translateX(0.5rem);
+}
+
 
 .blog-post-img img::before {
     content: '';
@@ -119,6 +126,10 @@ const props = defineProps({
     background: linear-gradient(to right, #000000, #000000) no-repeat right bottom;
     background-size: 0 1px;
     transition: background-size 1s;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
 .blog-post-title:hover {
@@ -132,6 +143,9 @@ const props = defineProps({
     margin-bottom: 3rem;
     font-size: 0.96rem;
     color: rgba(0, 0, 0, 0.7);
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .blog-post-cta {
@@ -203,6 +217,10 @@ const props = defineProps({
     .blog-post-title {
         font-size: 1.75rem;
         margin: 1.5rem 0 1.5rem;
+    }
+    .blog-post-info p{
+        height: 10rem;
+        overflow: hidden;
     }
 }
 </style>
