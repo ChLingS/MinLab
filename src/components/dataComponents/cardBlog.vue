@@ -143,6 +143,7 @@ const props = defineProps({
     margin-bottom: 3rem;
     font-size: 0.96rem;
     color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
