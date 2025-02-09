@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/warming/',
+  base: '/Minlab/',
   build: {
     rollupOptions: {
       output: {
