@@ -75,7 +75,7 @@ const setDefaultImage = (event) => {
 /* 图片样式 */
 .image-container img {
     width: 100%;
-    height: 21rem;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
@@ -87,7 +87,7 @@ const setDefaultImage = (event) => {
 
 /* 调整 card-body 样式 */
 .card-body {
-    height: 18rem;
+    height: 17rem;
     padding: 10px;
     display: flex;
     flex-direction: column; /* 垂直排列子元素 */
