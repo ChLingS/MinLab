@@ -66,6 +66,8 @@ const loadMore = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
+  width: 50%;
 }
 
 .centered-item {
