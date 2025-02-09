@@ -110,7 +110,9 @@ const loadMore = () => {
   .title {
     font-size: 20px;
   }
-
+  .centered-list{
+    width: 100%;
+  }
   .centered-item {
     margin-bottom: 15px;
   }
