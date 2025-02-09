@@ -60,10 +60,11 @@ const setDefaultImage = (event) => {
 
 /* 图片容器 */
 .image-container {
-    width: 100%;
-    max-width: 100%;
-    max-height: 10rem;
-    overflow: hidden; /* 隐藏超出部分 */
+    min-width: 21rem;
+    max-width: 21rem;
+    height: 21rem;
+    max-height: 21rem;
+    overflow: hidden;
     border-radius: 4px;
     position: relative;
     display: flex;
@@ -74,18 +75,21 @@ const setDefaultImage = (event) => {
 /* 图片样式 */
 .image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: contain; /* 保持图片比例并覆盖容器 */
-    transition: transform 0.3s ease; /* 添加缩放过渡效果 */
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-/* 鼠标移入时缩放图片 */
 .image-container:hover img {
-    transform: scale(1.1); /* 缩放比例为1.1 */
+    transform: scale(1.1);
 }
 
+/* 调整 card-body 样式 */
 .card-body {
+    height: 20rem;
     padding: 10px;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: space-between; /* 在垂直方向上分散子元素 */
 }
 
 .card h3 {
@@ -102,6 +106,14 @@ const setDefaultImage = (event) => {
 .card-title:hover {
     background-position: left bottom;
     background-size: 100% 1px;
+}
+
+.card-date{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.84rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    /* 移除多余的 margin-top */
 }
 
 @media screen and (max-width: 768px) {
