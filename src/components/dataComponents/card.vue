@@ -62,8 +62,8 @@ const setDefaultImage = (event) => {
 .image-container {
     min-width: 21rem;
     max-width: 21rem;
-    height: 21rem;
-    max-height: 21rem;
+    height: 19rem;
+    max-height: 19rem;
     overflow: hidden;
     border-radius: 4px;
     position: relative;
@@ -76,7 +76,8 @@ const setDefaultImage = (event) => {
 .image-container img {
     width: 100%;
     height: 21rem;
-    object-fit: contain;
+    object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
