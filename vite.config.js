@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/Minlab/',
+  base: '/MinLab/',
   build: {
     rollupOptions: {
       output: {
