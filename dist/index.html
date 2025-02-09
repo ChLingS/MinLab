@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
+    <script>
+      (function () {
+        const redir = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redir && redir !== location.href) {
+          history.replaceState(null, null, redir);
+        }
+      })();
+    </script>
     <meta charset="UTF-8">
     <link rel="icon" href="/src/icon.png">
     <link rel="stylesheet" href="/MinLab/font-awesome/css/font-awesome.min.css">
