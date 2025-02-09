@@ -6,7 +6,8 @@
         </div>
         <div class="card-body">
             <h3><a :href="perpar_url" class="card-title">{{ title }}</a></h3>
-            <p>{{ description }}</p>
+            
+            <p class="card-description">{{ description }}</p>
             <div v-if="date" class="card-date">Date: {{ date }}</div>
         </div>
     </div>
@@ -49,9 +50,10 @@ const setDefaultImage = (event) => {
     display: flex;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 10px;
+    padding: 0.7rem;
     margin: 10px;
-    width: 50rem;
+    align-items: center;
+    /* width: 50rem; */
 }
 
 .card:hover {
@@ -63,13 +65,9 @@ const setDefaultImage = (event) => {
     min-width: 21rem;
     max-width: 21rem;
     height: 19rem;
-    max-height: 19rem;
     overflow: hidden;
     border-radius: 4px;
     position: relative;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
 }
 
 /* 图片样式 */
@@ -118,11 +116,31 @@ const setDefaultImage = (event) => {
     /* 移除多余的 margin-top */
 }
 
+.card-description {
+  word-wrap: break-word; /* 确保长单词换行 */
+  word-break: break-all; /* 确保长单词换行 */
+}
+
 @media screen and (max-width: 768px) {
     .card {
-        width: 100%;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+    .image-container {
+        min-width: 100%;
+        max-width: 100%;
+        height: 15rem;
+        margin: 0px;
+        padding: 0px;
+    }
+    .card-body {
+        height: 15rem;
+        width: 100%;
+    }
+    .card-body p {
+        height: 10rem;
+        overflow: hidden;
     }
 }
 </style>
