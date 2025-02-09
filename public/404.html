@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <link rel="icon" href="/src/icon.png">
     <link rel="stylesheet" href="/MinLab/font-awesome/css/font-awesome.min.css">
+    <script>
+      sessionStorage.redirect = location.href;
+    </script>
+    <meta http-equiv="refresh" content="0; URL='/'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinLab</title>
     <script type="module" crossorigin src="/MinLab/assets/index-Ba994k-j.js"></script>
     <link rel="stylesheet" crossorigin href="/MinLab/assets/index-BQ8xqU5p.css">
   </head> 
-  <script>
-    (function () {
-      const redir = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redir && redir !== location.href) {
-        history.replaceState(null, null, redir);
-      }
-    })();
-  </script>
   <body style="height: 100%;margin: 0;padding: 0;">
     <div id="app"></div>
   </body>

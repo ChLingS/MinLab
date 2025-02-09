@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinLab</title>
   </head> 
+  <script>
+    (function () {
+      const redir = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redir && redir !== location.href) {
+        history.replaceState(null, null, redir);
+      }
+    })();
+  </script>
   <body style="height: 100%;margin: 0;padding: 0;">
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
