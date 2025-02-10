@@ -181,6 +181,7 @@ header>nav {
   cursor: pointer;
   font-size: 2rem;
   color: #4f4f4f;
+  margin-right: 1rem;
 }
 
 /*dropdown*/
@@ -242,7 +243,7 @@ header>nav {
     display: block;
     /* /* padding: 7px; */
     margin-top: 0.5rem;
-    margin-right: 1.2rem;
+    /* margin-right: 1.2rem; */
   }
 }
 </style>
