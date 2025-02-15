@@ -62,8 +62,8 @@ const setDefaultImage = (event) => {
 
 /* 图片容器 */
 .image-container {
-    min-width: 30%;
-    max-width: 30%;
+    min-width: auto;
+    max-width: auto;
     height: 19rem;
     overflow: hidden;
     border-radius: 4px;
@@ -120,6 +120,10 @@ const setDefaultImage = (event) => {
 .card-description {
   word-wrap: break-word; /* 确保长单词换行 */
   word-break: break-all; /* 确保长单词换行 */
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 @media screen and (max-width: 768px) {

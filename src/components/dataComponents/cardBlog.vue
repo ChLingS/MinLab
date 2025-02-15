@@ -76,8 +76,8 @@ const props = defineProps({
 }
 
 .blog-post-img {
-    min-width: 21rem;
-    max-width: 21rem;
+    min-width: 30%;
+    max-width: 30%;
     height: 19rem;
     /* transform: translateX(-5rem); */
     position: relative;
@@ -176,8 +176,8 @@ const props = defineProps({
     }
 
     .blog-post-img {
-        min-width: 30rem;
-        max-width: 30rem;
+        min-width: 30%;
+        max-width: 30%;
     }
 }
 

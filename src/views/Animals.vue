@@ -11,12 +11,10 @@
             :title="'导师：黄敏'" 
             :description="'&emsp;&emsp;武汉大学博士毕业，2023年赣鄱俊才·江西省主要学科学术和技术带头人（青年），国家自然科学基金委员会通讯评议专家，国际SCI二区学术期刊Remote Sensing专刊主编、国际学术期刊Data Science and Management青年编委、国际学术会议ICAG、AOGS分会场主席。主要从事智慧城市、遥感应用、北斗地理信息产教融合，在G&RS、JAG等国际权威学术期刊上发表论文10多篇。'" 
             :imageUrl="'https://dlxy.jxnu.edu.cn/_upload/article/images/04/2c/25605e83423f8dfdcdda3843c0b0/be785e3a-53fb-49e7-8648-8025d791e285.jpg'" 
-            :date="''" 
+            :date="'2025-02-09'" 
         />
     </div>
     <div class="card-list">
-
-
         <div v-for="(grade, index) in uniqueGrades" :key="index" class="card-item">
             <h3>{{ grade }}</h3>
             <div v-for="(item, index) in persons" :key="index">
@@ -34,12 +32,11 @@
                     {{ item }}
                     <div class="line"></div>
                 </li>
-
             </ul>
         </div>
     </Transition>
-
 </template>
+
 <script setup>
 import { ref, watch, onMounted, onUnmounted } from 'vue';
 import cardAnimals from '@/components/dataComponents/cardAnimals.vue';
@@ -68,6 +65,7 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
 <style scoped>
 /* scoped 使用得定义的样式只在本页面内生效  */
 .container {
@@ -108,8 +106,15 @@ onUnmounted(() => {
 .the_Boss {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-family: sans-serif;
+    width: 100%;
+    margin: 20px 0;
 }
+.the_Boss .card {
+    width: 50%;
+    margin: 0 20px;
+}   
 
 .card-list {
     display: flex;
@@ -126,17 +131,12 @@ onUnmounted(() => {
 
 .grade-list {
     position: fixed;
-    /* justify-content: center; */
     width: 15%;
-    /* 固定位置 */
     top: 20%;
-    /* 从顶部开始的距离，可以根据需要调整 */
     right: 1.2rem;
-    /* 固定在右侧 */
     font-family: NovecentoSansWide;
     font-size: 2rem;
     color: #7a7a7a;
-    ;
     margin-top: 5%;
 }
 .grade-list ul li {
@@ -165,10 +165,7 @@ onUnmounted(() => {
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active in <2.1.8 */
-    {
+.fade-leave-to {
     opacity: 0;
 }
 
@@ -182,7 +179,6 @@ onUnmounted(() => {
     }
     .card-list {
         width: 100%;
-
     }
     .card-item{
         font-size: 1rem;
