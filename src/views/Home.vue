@@ -77,14 +77,16 @@ const scrollToTarget = () => {
     padding: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; /* 确保背景图像覆盖整个容器 */
     z-index: -1;
     background-position: center center;
     padding-top: 1px;
 }
 
 .container {
-    height: 100vh;
+    width: 100%; /* 确保容器宽度为100% */
+    height: 100vh; /* 确保容器高度为视口高度 */
+    overflow: hidden; /* 防止内容溢出 */
 }
 
 .content {

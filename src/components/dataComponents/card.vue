@@ -51,7 +51,7 @@ const setDefaultImage = (event) => {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0.7rem;
-    margin: 10px;
+    /* margin: 10px; */
     align-items: center;
     /* width: 50rem; */
 }
@@ -62,8 +62,8 @@ const setDefaultImage = (event) => {
 
 /* 图片容器 */
 .image-container {
-    min-width: 21rem;
-    max-width: 21rem;
+    min-width: 30%;
+    max-width: 30%;
     height: 19rem;
     overflow: hidden;
     border-radius: 4px;
@@ -86,6 +86,7 @@ const setDefaultImage = (event) => {
 /* 调整 card-body 样式 */
 .card-body {
     height: 17rem;
+    width: 70%;
     padding: 10px;
     display: flex;
     flex-direction: column; /* 垂直排列子元素 */

@@ -54,10 +54,10 @@ const loadMore = () => {
 
 .divider {
   width: 80%;
-  height: 2px;
-  background-color: #ccc;
-  margin: 20px auto 0;
-  border-radius: 1px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px auto 0;
+    border-radius: 1px;
 }
 
 .centered-list {
