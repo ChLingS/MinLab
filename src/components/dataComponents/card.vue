@@ -62,8 +62,8 @@ const setDefaultImage = (event) => {
 
 /* 图片容器 */
 .image-container {
-    min-width: auto;
-    max-width: auto;
+    min-width: 30%;
+    max-width: 30%;
     height: 19rem;
     overflow: hidden;
     border-radius: 4px;
@@ -85,7 +85,7 @@ const setDefaultImage = (event) => {
 
 /* 调整 card-body 样式 */
 .card-body {
-    height: 17rem;
+    height: 16rem;
     width: 70%;
     padding: 10px;
     display: flex;

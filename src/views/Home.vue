@@ -1,47 +1,49 @@
 <template>
-    <div class="container">
-        <figure :style="{ backgroundImage: `url(${backImage})` }" class="background-image">
-            <div class="content">
-                <div style="display: flex; gap: 0.5rem; align-items: center; justify-content: center;">
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>M</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>i</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>n</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>L</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>a</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                    <KinesisContainer>
-                        <KinesisElement :strength="10">
-                            <h1>b</h1>
-                        </KinesisElement>
-                    </KinesisContainer>
-                </div>
+    <div class="container" @scroll="handleScroll">
+        <figure :style="{ backgroundImage: `url(${backImage})`, 'z-index': -1 }" class="background-image">
+            <transition name="fade">
+                <div class="content" v-show="showContent">
+                    <div style="display: flex; gap: 0.5rem; align-items: center; justify-content: center;">
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>M</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>i</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>n</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>L</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>a</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                        <KinesisContainer>
+                            <KinesisElement :strength="10">
+                                <h1>b</h1>
+                            </KinesisElement>
+                        </KinesisContainer>
+                    </div>
 
-                <div style="font-family: SourceHanSerifCN; font-size: 1.1rem;">
-                    <span style="font-family: 'NovecentoSansWide', sans-serif;">MinLab</span>
-                    <span>是一个江西师范大学地理与环境学院的</span>
-                    <span style="font-family: 'NovecentoSansWide', sans-serif;">GIS</span>
-                    <span>研究团队</span>
+                    <div style="font-family: SourceHanSerifCN; font-size: 1.1rem;">
+                        <span style="font-family: 'NovecentoSansWide', sans-serif;">MinLab</span>
+                        <span>是一个江西师范大学地理与环境学院的</span>
+                        <span style="font-family: 'NovecentoSansWide', sans-serif;">GIS</span>
+                        <span>研究团队</span>
+                    </div>
                 </div>
-            </div>
+            </transition>
             <div class="arrow-container">
                 <div class="arrow" @click="scrollToTarget"></div>
             </div>
@@ -63,10 +65,16 @@ import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 import { ref } from 'vue';
 const targetSection = ref(null);
+const showContent = ref(true);
+
 const scrollToTarget = () => {
     targetSection.value.scrollIntoView({ behavior: 'smooth' });
 };
 
+const handleScroll = (event) => {
+    const scrollTop = event.target.scrollTop;
+    showContent.value = scrollTop < 150; // 根据滚动位置控制显示和隐藏
+};
 </script>
 
 <style scoped>
@@ -86,7 +94,7 @@ const scrollToTarget = () => {
 .container {
     width: 100%; /* 确保容器宽度为100% */
     height: 100vh; /* 确保容器高度为视口高度 */
-    overflow: hidden; /* 防止内容溢出 */
+    overflow: auto; /* 允许页面滚动 */
 }
 
 .content {
@@ -96,12 +104,22 @@ const scrollToTarget = () => {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
+    z-index: 0;
 }
 
 .content h1 {
     font-family: 'NovecentoSansWide', sans-serif;
     font-size: 5.5rem;
     font-weight: 600
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    /* transform: translateY(20px); */
 }
 
 .flex-container {
@@ -154,6 +172,9 @@ const scrollToTarget = () => {
     cursor: pointer;
 }
 
+.target{
+    z-index: 2;
+}
 .date {
     position: absolute;
     bottom: 3%;
