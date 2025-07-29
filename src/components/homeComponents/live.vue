@@ -6,16 +6,15 @@
         width: 80%;  
         height: 2px; /* 分界线高度 */
          background-color: #ccc; /* 分界线颜色 */ 
-         margin: 20px auto 0; /* 上下边距和居中对齐 */ 
          border-radius: 1px;
       "></div>
     </div>
 
-    <ul class="centered-list">
-      <li v-for="(paper, index) in visiblePapers" :key="index" class="centered-item" v-slideln>
+    <div class="centered-list">
+      <div v-for="(paper, index) in visiblePapers" :key="index" class="centered-item" v-slideln>
         <Card :title="paper.title" :description="paper.abstract" :imageUrl="paper.image_url" :date="paper.date" />
-      </li>
-    </ul>
+      </div>
+    </div>
     <div v-if="papers.length > visiblePapers.length" class="load-more">
       <button @click="loadMore" class="arrow-button">⬇️</button>
     </div>
@@ -42,6 +41,10 @@ const loadMore = () => {
 
 <style scoped>
 .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 20px;
@@ -54,15 +57,12 @@ const loadMore = () => {
 
 .divider {
   width: 80%;
-    height: 2px;
-    background-color: #ccc;
-    margin: 20px auto 0;
-    border-radius: 1px;
+  height: 2px;
+  background-color: #ccc;
+  border-radius: 1px;
 }
 
 .centered-list {
-  list-style-type: none;
-  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,9 +112,15 @@ const loadMore = () => {
   }
   .centered-list{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
   }
   .centered-item {
+    display: flex;
     margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
   }
 
   .arrow-button {

@@ -51,9 +51,7 @@ const setDefaultImage = (event) => {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0.7rem;
-    /* margin: 10px; */
     align-items: center;
-    /* width: 50rem; */
 }
 
 .card:hover {
@@ -75,7 +73,7 @@ const setDefaultImage = (event) => {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    /* display: block; */
     transition: transform 0.3s ease;
 }
 

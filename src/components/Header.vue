@@ -127,7 +127,7 @@ header>nav {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 0 10px;
+  /* padding: 0 10px; */
   transition: all 0.7s ease-in-out;
 }
 
@@ -172,6 +172,7 @@ header>nav {
 }
 
 .logo {
+  padding: 0 10px;
   width: 35px;
   height: 35px;
 }

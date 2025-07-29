@@ -5,7 +5,7 @@ import backTotop from './components/backTotop.vue';
 </script>
 
 <template>
-  <Header />
+  <Header/>
   <main class="content">
     <RouterView v-slot="{ Component }">
       <transition name="fade" mode="out-in">
