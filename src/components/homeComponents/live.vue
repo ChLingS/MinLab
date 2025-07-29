@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width: 100%;">
     <div class="title">
       <h2>动态</h2>
       <div style="
@@ -90,6 +90,7 @@ const loadMore = () => {
 }
 
 .load-more {
+  width: 100%;
   text-align: center;
   margin-top: 20px;
 }

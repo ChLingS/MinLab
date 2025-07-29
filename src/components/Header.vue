@@ -100,7 +100,7 @@ onUnmounted(() => {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 60px;
   background-color: #ffffff;
   transition: opacity 0.5s ease-in-out, top 0.3s;
@@ -182,7 +182,7 @@ header>nav {
   cursor: pointer;
   font-size: 2rem;
   color: #4f4f4f;
-  margin-right: 1rem;
+  padding-right: 1rem;
 }
 
 /*dropdown*/
@@ -242,9 +242,7 @@ header>nav {
 
   .toggle-button {
     display: block;
-    /* /* padding: 7px; */
     margin-top: 0.5rem;
-    /* margin-right: 1.2rem; */
   }
 }
 </style>
