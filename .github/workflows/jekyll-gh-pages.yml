@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   deploy:
+    environment:  # 必须添加的环境配置
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/'  # 直接上传dist目录下的所有内容
+          path: 'dist/'  # 确保这是你的HTML文件所在目录
           
       - name: Deploy to GitHub Pages
         id: deployment
