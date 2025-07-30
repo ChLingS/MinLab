@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'dist/'  # 确保这是你的HTML文件所在目录
+          path: 'dist/index.html'  # 确保这是你的HTML文件所在目录
           
       - name: Deploy to GitHub Pages
         id: deployment
